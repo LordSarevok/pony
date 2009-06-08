@@ -28,6 +28,9 @@ module Pony
 		mail.from = options[:from] || 'pony@unknown'
 		mail.subject = options[:subject]
 		mail.body = options[:body] || ""
+		if options[:html_body] == true
+      mail.set_content_type('text','html')
+    end
 		mail
 	end
 
