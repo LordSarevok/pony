@@ -29,7 +29,7 @@ module Pony
 		mail.subject = options[:subject]
 		mail.body = options[:body] || ""
 		if options[:html_body] == true
-      mail.set_content_type('text','html')
+      mail.set_content_type('text','html',{'charset'=>'utf-8'})
     end
 		mail
 	end
